@@ -22,6 +22,7 @@ moves or a component is added. `autodoc` turns that into a repeatable, reviewabl
 | **Automatic triggers** | A Claude Code hook runs when a task is finalised (and on architecture-relevant changes such as new modules, services, routes or schema files). It decides which pages are affected and updates only those. |
 | **Auto schema** | Extracts schemas from what your project already has (OpenAPI / JSON Schema first; SQL migrations and ORM models after) and writes reference pages that cannot drift from the source. |
 | **Architecture diagrams** | Generates and updates Mermaid diagrams (context, containers, data model, key flows) from the code structure and your notes, stored next to the pages that use them. |
+| **Doc coverage and freshness** | A percentage of your project's endpoints, schema items, modules and config keys that a page documents, plus the pages whose source files changed since they were written. Shown in a status line and panel, and as JSON for CI. |
 | **Reviewable by design** | Changes land on a branch or in a drafts folder as a normal diff. `autodoc` never silently rewrites published pages and never invents facts it cannot trace to the code or to a task. |
 | **Private by default** | Everything runs locally. The generated site is static, so you can host it anywhere (for example behind your own access control). Nothing is sent anywhere except through your normal Claude Code session. |
 
@@ -50,8 +51,9 @@ exact commands here once they work. Until then, watch or star the repository to 
 - [ ] **0.1**: skill + docs-project scaffold + manual `/autodoc update`
 - [ ] **0.2**: task-finalised hook, branch / drafts output, config file
 - [ ] **0.3**: OpenAPI / JSON Schema reference pages
-- [ ] **0.4**: Mermaid architecture diagrams (context, containers, data model)
-- [ ] **0.5**: SQL migration and ORM schema extractors
+- [ ] **0.4**: doc coverage and freshness: an inventory of what your project exposes (endpoints, schema, modules, config keys), the percentage a page documents, and which pages are stale; shown in a Claude Code status line and panel and as `/autodoc coverage --json` for CI. It measures whether something is documented and cited, not whether the text is correct
+- [ ] **0.5**: Mermaid architecture diagrams (context, containers, data model)
+- [ ] **0.6**: SQL migration and ORM schema extractors
 - [ ] **1.0**: stable config, docs, examples and a test suite
 
 ## Contributing

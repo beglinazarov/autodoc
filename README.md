@@ -52,7 +52,7 @@ exact commands here once they work. Until then, watch or star the repository to 
 - [ ] **0.2**: task-finalised hook, branch / drafts output, config file
 - [ ] **0.3**: OpenAPI / JSON Schema reference pages
 - [ ] **0.4**: doc coverage and freshness: an inventory of what your project exposes (endpoints, schema, modules, config keys), the percentage a page documents, and which pages are stale; shown in a Claude Code status line and panel and as `/autodoc coverage --json` for CI. It measures whether something is documented and cited, not whether the text is correct
-- [ ] **0.5**: Mermaid architecture diagrams (context, containers, data model)
+- [ ] **0.5**: Mermaid architecture diagrams (context, containers, data model), plus an optional [draw.io MCP](https://github.com/jgraph/drawio-mcp) for hand-polished diagrams: the `.drawio` file and an exported SVG are committed next to the page, and automatic updates never overwrite a diagram a person edited. Off by default; the local server is the default, the hosted endpoint sends diagram content to a third party
 - [ ] **0.6**: SQL migration and ORM schema extractors
 - [ ] **1.0**: stable config, docs, examples and a test suite
 
